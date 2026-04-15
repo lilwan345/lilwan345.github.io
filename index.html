@@ -552,6 +552,44 @@
             transform: translateY(-4px);
         }
 
+        .proj-thumb {
+            position: relative;
+            height: 170px;
+            overflow: hidden;
+        }
+        .proj-thumb img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform .5s ease;
+        }
+        .proj-card:hover .proj-thumb img {
+            transform: scale(1.04);
+        }
+        .proj-thumb-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(3,7,15,0) 30%,
+                rgba(3,7,15,.75) 100%
+            );
+        }
+        .proj-featured {
+            position: absolute;
+            top: .75rem; left: .75rem;
+            padding: .28rem .75rem;
+            background: rgba(0,212,255,.18);
+            border: 1px solid rgba(0,212,255,.4);
+            border-radius: 20px;
+            font-size: .7rem;
+            font-family: var(--mono);
+            color: var(--cyan);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            letter-spacing: .04em;
+        }
+
         .proj-bar {
             height: 4px;
             background: linear-gradient(90deg, var(--cyan), var(--blue));
@@ -1086,7 +1124,12 @@
 
             <!-- Main project -->
             <div class="proj-card fade-up d1">
-                <div class="proj-bar"></div>
+                <div class="proj-thumb">
+                    <img src="olist-thumbnail.png" alt="Brazilian E-Commerce Marketplace">
+                    <div class="proj-thumb-overlay"></div>
+                    <span class="proj-featured">⭐ Featured Project</span>
+                    <div class="proj-bar" style="position:absolute;bottom:0;left:0;right:0;"></div>
+                </div>
                 <div class="proj-body">
                     <div class="proj-type">SQL + R · Financial Risk Analysis</div>
                     <div class="proj-title">Marketplace Revenue Risk Analysis — Brazilian E-Commerce Platform</div>
