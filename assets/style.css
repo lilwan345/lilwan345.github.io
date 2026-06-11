@@ -14,6 +14,52 @@
     --mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
+/* ── Cyberdeck mode (toggle in masthead) ────────────────────── */
+
+[data-theme="cyber"] {
+    --cream: #07060f;
+    --ink: #e9ecff;
+    --muted: #8b93b8;
+    --accent: #ff2e97;
+    --hairline: rgba(0, 234, 255, .18);
+}
+
+[data-theme="cyber"] body {
+    background-image:
+        radial-gradient(ellipse 90% 55% at 50% -12%, rgba(180, 107, 255, .10), transparent 70%),
+        radial-gradient(ellipse 70% 40% at 85% 20%, rgba(0, 234, 255, .05), transparent 70%);
+    background-attachment: fixed;
+}
+
+[data-theme="cyber"] ::selection { background: #00eaff; color: #07060f; }
+
+[data-theme="cyber"] .masthead { background: rgba(7, 6, 15, .9); }
+[data-theme="cyber"] .masthead nav a:hover { color: #00eaff; }
+
+[data-theme="cyber"] .eyebrow { color: #00eaff; }
+
+[data-theme="cyber"] .hero h1 em {
+    background: linear-gradient(90deg, #ff2e97, #b46bff, #00eaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ff2e97; /* fallback */
+}
+
+[data-theme="cyber"] .section-no { border-top-color: #00eaff; color: #00eaff; }
+[data-theme="cyber"] .xp-date { color: #00eaff; }
+[data-theme="cyber"] .feature-links a:hover { color: #00eaff; border-color: #00eaff; }
+[data-theme="cyber"] .product-text .feature-links a:hover { color: #00eaff; }
+
+[data-theme="cyber"] .colophon { background: #0c0a1c; color: #e9ecff; }
+[data-theme="cyber"] .colophon .section-no { border-top-color: #00eaff; color: #00eaff; }
+[data-theme="cyber"] .colophon-line { color: #8b93b8; }
+[data-theme="cyber"] .big-email { color: #e9ecff; border-bottom-color: #00eaff; }
+[data-theme="cyber"] .big-email:hover { color: #00eaff; }
+[data-theme="cyber"] .colophon-links a { color: #8b93b8; }
+[data-theme="cyber"] .colophon-links a:hover { color: #00eaff; }
+[data-theme="cyber"] .fine-print { border-top-color: rgba(0, 234, 255, .15); color: #6a7194; }
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -24,6 +70,11 @@ body {
     line-height: 1.7;
     background: var(--cream);
     color: var(--ink);
+    transition: background-color .35s ease-out, color .35s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body { transition: none; }
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -117,6 +168,31 @@ a { color: inherit; }
 }
 .masthead nav a:hover { color: var(--accent); }
 
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .3rem .7rem;
+    background: none;
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    font-family: var(--mono);
+    font-size: .68rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color .2s ease-out, border-color .2s ease-out, box-shadow .2s ease-out;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
+[data-theme="cyber"] .theme-toggle {
+    color: #00eaff;
+    border-color: rgba(0, 234, 255, .5);
+    box-shadow: 0 0 14px rgba(0, 234, 255, .25), inset 0 0 8px rgba(0, 234, 255, .08);
+}
+[data-theme="cyber"] .theme-toggle:hover { color: #ff2e97; border-color: #ff2e97; box-shadow: 0 0 14px rgba(255, 46, 151, .3); }
+
 /* ── Hero ───────────────────────────────────────────────────── */
 
 .hero {
@@ -181,6 +257,39 @@ a { color: inherit; }
 }
 
 .stat-strip > div { display: flex; flex-direction: column; }
+
+/* Gini footnote tooltip */
+.has-tip {
+    position: relative;
+    cursor: help;
+    width: fit-content;
+    border-bottom: 1px dotted currentColor;
+}
+
+.tip {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + .65rem);
+    z-index: 20;
+    width: min(300px, 72vw);
+    background: var(--ink);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: .78rem;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0;
+    text-transform: none;
+    padding: .7rem .85rem;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .2s ease-out;
+}
+
+.has-tip:hover .tip,
+.has-tip:focus .tip { opacity: 1; visibility: visible; }
 
 /* ── Sections ───────────────────────────────────────────────── */
 

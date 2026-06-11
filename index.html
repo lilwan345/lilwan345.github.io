@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+    <script>try { if (localStorage.getItem('theme') === 'cyber') document.documentElement.dataset.theme = 'cyber'; } catch (e) {}</script>
 </head>
 <body>
 
@@ -30,6 +31,10 @@
             <a href="#work">Work</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" title="Toggle Cyberdeck mode">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>Cyber</span>
+            </button>
         </nav>
     </div>
 </header>
@@ -46,9 +51,16 @@
             AI agents can augment the analyst workflow.
         </p>
         <dl class="stat-strip reveal" aria-label="At a glance">
-            <div><dt>Transactions analyzed</dt><dd>1.85M</dd></div>
-            <div><dt>Tools shipped</dt><dd>4</dd></div>
-            <div><dt>Favorite Gini coefficient</dt><dd class="accent">0.528</dd></div>
+            <div><dt>Transactions analyzed</dt><dd><span class="num" data-count="1.85" data-decimals="2" data-suffix="M">1.85M</span></dd></div>
+            <div><dt>Tools shipped</dt><dd><span class="num" data-count="4" data-decimals="0">4</span></dd></div>
+            <div><dt>Favorite Gini coefficient</dt>
+                <dd class="accent has-tip" tabindex="0" aria-describedby="gini-tip">
+                    <span class="num" data-count="0.528" data-decimals="3">0.528</span>
+                    <span class="tip" role="note" id="gini-tip">The Gini coefficient measures how unevenly revenue is spread —
+                    0 means every household spends the same, 1 means a single household buys everything.
+                    At 0.528, Amazon leans hard on its heaviest shoppers.</span>
+                </dd>
+            </div>
         </dl>
     </section>
 
