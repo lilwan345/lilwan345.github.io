@@ -315,9 +315,24 @@ a { color: inherit; }
 
 .product-media {
     display: block;
+    position: relative;
     overflow: hidden;
     border: 1px solid var(--hairline);
 }
+
+/* Live preview iframe layered over the static thumbnail (desktop only,
+   injected by main.js unless the user prefers reduced motion). */
+.product-media iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .8s ease-out;
+}
+.product-media iframe.ready { opacity: 1; }
 
 .product-media img {
     transition: transform .4s ease-out;
