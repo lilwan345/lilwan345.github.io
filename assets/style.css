@@ -443,15 +443,22 @@ a { color: inherit; }
 }
 .product-media iframe.ready { opacity: 1; }
 
-.product-media img {
+.product-media img,
+.product-media video {
+    display: block;
+    max-width: 100%;
+    height: auto;
     transition: transform .4s ease-out;
 }
 
-.product-media:hover img { transform: scale(1.025); }
+.product-media:hover img,
+.product-media:hover video { transform: scale(1.025); }
 
 @media (prefers-reduced-motion: reduce) {
-    .product-media img { transition: none; }
-    .product-media:hover img { transform: none; }
+    .product-media img,
+    .product-media video { transition: none; }
+    .product-media:hover img,
+    .product-media:hover video { transform: none; }
 }
 
 .product-text { padding-top: 1.5rem; }
