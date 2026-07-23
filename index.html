@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liyuan Wan — data analyst who ships real products. AI for Business at USC Marshall. Revenue analytics case studies, browser tools, and creative code.">
-    <title>Liyuan Wan — Data Analyst &amp; Builder</title>
+    <meta name="description" content="Liyuan Wan — Data &amp; BI analyst who ships real products. AI for Business at USC Marshall. Revenue analytics case studies, browser tools, and creative code.">
+    <title>Liyuan Wan — Data &amp; BI Analyst · Builder</title>
 
-    <meta property="og:title" content="Liyuan Wan — Data Analyst &amp; Builder">
+    <meta property="og:title" content="Liyuan Wan — Data &amp; BI Analyst · Builder">
     <meta property="og:description" content="Rigorous revenue analytics in SQL and Python, plus the tools I wish existed. USC Marshall, AI for Business.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lilwan345.github.io/">
@@ -44,23 +44,16 @@
     <!-- ═══ Hero ═══ -->
     <section class="hero container">
         <p class="eyebrow reveal">USC Marshall · AI for Business · Los Angeles</p>
-        <h1 class="reveal">Data analyst who ships <em>real products.</em></h1>
+        <h1 class="reveal">Data &amp; BI analyst who ships <em>real products.</em></h1>
         <p class="hero-intro reveal">
-            I&rsquo;m Liyuan (Leo) Wan. I do rigorous revenue analytics in SQL and Python —
-            then build the tools I wish existed along the way. Currently exploring how
-            AI agents can augment the analyst workflow.
+            I&rsquo;m Liyuan (Leo) Wan. I do rigorous revenue analytics in SQL and Python,
+            then build the tools I wish existed along the way — from browser utilities to
+            an AI agent that writes its own SQL and checks its work. I&rsquo;m most interested
+            in where careful analysis meets AI.
         </p>
         <dl class="stat-strip reveal" aria-label="At a glance">
             <div><dt>Transactions analyzed</dt><dd><span class="num" data-count="1.85" data-decimals="2" data-suffix="M">1.85M</span></dd></div>
             <div><dt>Tools shipped</dt><dd><span class="num" data-count="4" data-decimals="0">4</span></dd></div>
-            <div><dt>Favorite Gini coefficient</dt>
-                <dd class="accent has-tip" tabindex="0" aria-describedby="gini-tip">
-                    <span class="num" data-count="0.528" data-decimals="3">0.528</span>
-                    <span class="tip" role="note" id="gini-tip">The Gini coefficient measures how unevenly revenue is spread —
-                    0 means every household spends the same, 1 means a single household buys everything.
-                    At 0.528, Amazon leans hard on its heaviest shoppers.</span>
-                </dd>
-            </div>
         </dl>
     </section>
 
@@ -79,7 +72,7 @@
                 <figcaption>Lorenz curve, panel of 5,026 households — top 10% drive 35.9% of GMV.</figcaption>
             </figure>
             <div class="feature-text">
-                <p class="kicker">SQL · Python · scikit-learn · Tableau</p>
+                <p class="kicker">SQL · DuckDB · Python · scikit-learn · Tableau</p>
                 <h3>Amazon Revenue Analytics</h3>
                 <p class="standfirst">
                     Where does revenue concentrate, what&rsquo;s at risk next quarter, and where
@@ -103,13 +96,13 @@
             <figure class="feature-media">
                 <img src="assets/img/olist.png" alt="Brazilian e-commerce marketplace revenue analysis thumbnail"
                      width="1050" height="600" loading="lazy">
-                <figcaption>100K+ orders across Brazil&rsquo;s largest marketplace, 2016–2018.</figcaption>
+                <figcaption>99K+ orders across Brazil&rsquo;s largest marketplace, 2016–2018.</figcaption>
             </figure>
             <div class="feature-text">
                 <p class="kicker">SQL · R · Statistics</p>
                 <h3>Marketplace Revenue Risk — Olist</h3>
                 <p class="standfirst">
-                    Concentration and liquidity risk across 100K+ transactions on a Brazilian
+                    Concentration and liquidity risk across 99K+ transactions on a Brazilian
                     marketplace, quantified with industry-standard measures and turned into
                     three concrete interventions.
                 </p>
@@ -119,6 +112,32 @@
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/Marketplace-Revenue-Risk-Financial-Stability-Analysis" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+                </p>
+            </div>
+        </article>
+
+        <!-- Text-to-SQL Agent -->
+        <article class="feature reveal">
+            <figure class="feature-media">
+                <img src="assets/img/text-to-sql-agent.png" alt="Workflow diagram of the Text-to-SQL agent loop: Claude writes SQL, runs it read-only, reads its own errors, and decides when it is done"
+                     width="2400" height="1320" loading="lazy">
+                <figcaption>The loop: Claude writes the SQL, runs it read-only, reads its own errors, and decides when it&rsquo;s done.</figcaption>
+            </figure>
+            <div class="feature-text">
+                <p class="kicker">Python · Claude API · SQLite</p>
+                <h3>Text-to-SQL Agent</h3>
+                <p class="standfirst">
+                    Ask a question in plain English; the agent writes the SQL, executes it against a
+                    read-only database, and fixes its own errors. Built to learn how AI agents actually
+                    work — then tested like a BI tool, not a demo.
+                </p>
+                <ul class="findings">
+                    <li><strong>10/10</strong> on a clean benchmark (simple counts up to 4-table joins) and <strong>8/8 correct SQL</strong> on an adversarial set — synonym traps, temporal filters, NULLs, ambiguous metrics — all against independently computed ground truth.</li>
+                    <li>The adversarial set exposed a <strong>confident-guessing failure mode</strong>: on vague questions the agent silently picks one interpretation instead of flagging it — the exact risk that matters for self-serve BI.</li>
+                    <li>A second-pass self-check reviews each answer against the SQL and schema, turning silently-wrong answers into flagged ones.</li>
+                </ul>
+                <p class="feature-links">
+                    <a href="https://github.com/lilwan345/text-to-sql-agent" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
                 </p>
             </div>
         </article>
@@ -132,6 +151,30 @@
         </header>
 
         <div class="product-grid">
+            <article class="product reveal">
+                <a class="product-media" href="https://github.com/lilwan345/text-to-sql-agent" target="_blank" rel="noopener" aria-label="Open text-to-SQL Agent on GitHub">
+                    <img src="assets/img/text-to-sql-workflow.png" alt="Workflow: plain-English question → fetch schema → Claude writes SQL → run read-only → self-check → answer, with an error-retry loop"
+                         width="1280" height="800" loading="lazy">
+                </a>
+                <div class="product-text">
+                    <p class="kicker">Python · Claude API · SQL · evaluation</p>
+                    <h3>text-to-SQL Agent</h3>
+                    <p>
+                        An LLM agent that turns plain-English questions into executable SQL
+                        across a multi-table database — built with a two-tier test harness to
+                        find where it breaks, not just where it works.
+                    </p>
+                    <ul class="findings">
+                        <li>Converts natural-language questions into SQL across joins (up to 4 tables), filters, and group-by aggregations.</li>
+                        <li>Tested on a clean benchmark (<strong>10/10 correct</strong>) and an adversarial set probing synonym traps, time filters, NULLs, and empty results (<strong>8/8 factually correct</strong>).</li>
+                        <li>Surfaced a &ldquo;confident-guessing&rdquo; failure mode: on ambiguous questions the agent silently picks one metric instead of flagging it — a real risk for self-serve BI — and proposed a prompt-level guardrail.</li>
+                    </ul>
+                    <p class="feature-links">
+                        <a href="https://github.com/lilwan345/text-to-sql-agent" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+                    </p>
+                </div>
+            </article>
+
             <article class="product reveal">
                 <a class="product-media" href="https://lilwan345.github.io/tinytools/" target="_blank" rel="noopener" aria-label="Open tinytools live site">
                     <img src="assets/img/tinytools.jpg" alt="tinytools homepage — fast, free tools that run entirely in your browser"
@@ -169,6 +212,26 @@
                     <p class="feature-links">
                         <a href="https://lilwan345.github.io/claude-code-cyberpunk/wallpaper/" target="_blank" rel="noopener">Live wallpaper&nbsp;↗</a>
                         <a href="https://github.com/lilwan345/claude-code-cyberpunk" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="product reveal">
+                <a class="product-media" href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener" aria-label="Open BEACON on GitHub">
+                    <img src="assets/img/beacon-states.png" alt="BEACON — a glass-domed lighthouse diorama in six states: working, asking, idle, done, confused, resting"
+                         width="1573" height="1282" loading="lazy">
+                </a>
+                <div class="product-text">
+                    <p class="kicker">PySide6 · live desktop overlay · calm-tech</p>
+                    <h3>BEACON</h3>
+                    <p>
+                        A glass-domed lighthouse that floats over your windows and mirrors your
+                        Claude Code state in real time. When the agent needs you, the dome falls
+                        to amber dusk and the beam stops sweeping and turns toward you — six
+                        states crossfade like changing weather.
+                    </p>
+                    <p class="feature-links">
+                        <a href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
                     </p>
                 </div>
             </article>
