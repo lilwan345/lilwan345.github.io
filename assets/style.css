@@ -469,6 +469,19 @@ a { color: inherit; }
 .product-text .feature-links a { color: var(--ink); }
 .product-text .feature-links a:hover { color: var(--accent); }
 
+/* An odd card left alone on the last row stretches across both columns
+   (media left, text right) so the grid never ends with a hole. */
+@media (min-width: 821px) {
+    .product:nth-child(odd):last-child {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        gap: clamp(2rem, 4vw, 3rem);
+        align-items: center;
+    }
+    .product:nth-child(odd):last-child .product-text { padding-top: 0; }
+}
+
 /* ── About: experience + skills ─────────────────────────────── */
 
 .about-grid {
@@ -615,7 +628,12 @@ a { color: inherit; }
 @media (max-width: 480px) {
     .masthead nav { gap: 1.1rem; }
     .masthead nav a { font-size: .72rem; }
-    .masthead-name { font-size: .72rem; }
+    .masthead-name { font-size: .72rem; white-space: nowrap; }
+    .theme-toggle span { display: none; }  /* icon-only on phones so the name never wraps */
     .stat-strip { gap: 1.5rem 2.25rem; }
     .stat-strip dd { font-size: 1.25rem; }
+}
+
+@media (max-width: 340px) {
+    .theme-toggle { display: none; }
 }
