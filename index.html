@@ -76,11 +76,11 @@
                 <figcaption>Lorenz curve, panel of 5,026 households — top 10% drive 35.9% of GMV.</figcaption>
             </figure>
             <div class="feature-text">
-                <p class="kicker">SQL · DuckDB · Python · scikit-learn · Tableau</p>
+                <p class="kicker">May – Jul 2026 · SQL · DuckDB · Python · scikit-learn · Tableau</p>
                 <h3>Amazon Revenue Analytics</h3>
                 <p class="standfirst">
                     Where does revenue concentrate, what&rsquo;s at risk next quarter, and where
-                    should the category budget go? A four-layer BI framework over 5,026 U.S.
+                    should the category budget go? A three-layer BI framework over 5,026 U.S.
                     Amazon households, 2018–2022 — about 1.85M transactions.
                 </p>
                 <ul class="findings">
@@ -99,12 +99,14 @@
         <!-- Olist -->
         <article class="feature flip reveal">
             <figure class="feature-media">
-                <img src="assets/img/olist.png" alt="Brazilian e-commerce marketplace revenue analysis thumbnail"
-                     width="1050" height="600" loading="lazy">
-                <figcaption>99K+ orders across Brazil&rsquo;s largest marketplace, 2017–2018.</figcaption>
+                <a href="assets/img/olist-monthly-revenue.png" target="_blank" rel="noopener" aria-label="Open the monthly revenue chart full size">
+                    <img src="assets/img/olist-monthly-revenue.png" alt="Monthly Olist marketplace revenue in BRL, 2017 to 2018: a steep ramp-up through 2017, then a plateau near one million per month"
+                         width="1344" height="960" loading="lazy">
+                </a>
+                <figcaption>Monthly revenue, 99K+ orders, 2017–2018: a steep ramp-up, then a plateau near R$1M a month.</figcaption>
             </figure>
             <div class="feature-text">
-                <p class="kicker">SQL · R · Statistics</p>
+                <p class="kicker">Jan – Apr 2026 · PostgreSQL · R (tidyverse) · HTML/JS</p>
                 <h3>Marketplace Revenue Risk — Olist</h3>
                 <p class="standfirst">
                     Revenue stability, concentration, and cash-flow timing across 99K+
@@ -117,6 +119,7 @@
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/Marketplace-Revenue-Risk-Financial-Stability-Analysis" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+                    <a href="https://lilwan345.github.io/Marketplace-Revenue-Risk-Financial-Stability-Analysis/dashboard.html" target="_blank" rel="noopener">Interactive dashboard&nbsp;↗</a>
                 </p>
             </div>
         </article>
@@ -124,14 +127,14 @@
         <!-- Text-to-SQL Agent -->
         <article class="feature reveal">
             <figure class="feature-media">
-                <a href="assets/img/text-to-sql-agent.png" target="_blank" rel="noopener" aria-label="Open the agent-loop diagram full size">
-                    <img src="assets/img/text-to-sql-agent.png" alt="Workflow diagram of the Text-to-SQL agent loop: Claude writes SQL, runs it read-only, reads its own errors, and decides when it is done"
-                         width="2400" height="1320" loading="lazy">
+                <a href="assets/img/text-to-sql-workflow.png" target="_blank" rel="noopener" aria-label="Open the agent-loop diagram full size">
+                    <img src="assets/img/text-to-sql-workflow.png" alt="Five-step diagram of the Text-to-SQL agent: you ask, fetch schema, Claude writes SQL, run read-only (on a SQL error, read it and retry), then a self-check before answering"
+                         width="2560" height="1600" loading="lazy">
                 </a>
                 <figcaption>The loop: Claude writes the SQL, runs it read-only, reads its own errors, and decides when it&rsquo;s done.</figcaption>
             </figure>
             <div class="feature-text">
-                <p class="kicker">Python · Claude API · SQLite</p>
+                <p class="kicker">Jun – Jul 2026 · Python · Claude API · SQLite</p>
                 <h3>Text-to-SQL Agent</h3>
                 <p class="standfirst">
                     Ask a question in plain English; the agent writes the SQL, executes it against a
@@ -158,13 +161,36 @@
         </header>
 
         <div class="product-grid">
+            <article class="product wide reveal">
+                <a class="product-media" href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener" aria-label="Open BEACON on GitHub">
+                    <video src="assets/img/beacon-demo.mp4" poster="assets/img/beacon-demo-poster.jpg"
+                           width="1024" height="640" autoplay muted loop playsinline
+                           aria-label="BEACON — a glass-domed lighthouse diorama crossfading through six states: working, asking, idle, done, confused, resting"></video>
+                </a>
+                <div class="product-text">
+                    <p class="kicker">Jun 2026 · PySide6 · Claude Code hooks · calm-tech</p>
+                    <h3>BEACON</h3>
+                    <p>
+                        A glass-domed lighthouse that floats over your windows and mirrors your
+                        Claude Code state in real time. When the agent needs you, the dome falls
+                        to amber dusk and the beam stops sweeping and turns toward you — six
+                        states crossfade like changing weather. Run several agents and each
+                        gets a small boat; the one waiting on you sails to the front. Tuned for
+                        precision over recall, because one false alarm gets an ambient tool closed.
+                    </p>
+                    <p class="feature-links">
+                        <a href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
+                    </p>
+                </div>
+            </article>
+
             <article class="product reveal">
                 <a class="product-media" href="https://lilwan345.github.io/tinytools/" target="_blank" rel="noopener" aria-label="Open tinytools live site">
                     <img src="assets/img/tinytools.jpg" alt="tinytools homepage — fast, free tools that run entirely in your browser"
                          width="1280" height="800" loading="lazy">
                 </a>
                 <div class="product-text">
-                    <p class="kicker">Vanilla JS · zero servers · zero tracking</p>
+                    <p class="kicker">Jun 2026 · Vanilla JS · zero servers · zero tracking</p>
                     <h3>tinytools</h3>
                     <p>
                         Four free tools that run entirely in the browser — nothing ever leaves
@@ -185,7 +211,7 @@
                          width="1280" height="800" loading="lazy">
                 </a>
                 <div class="product-text">
-                    <p class="kicker">Canvas 2D · 60 fps · no libraries</p>
+                    <p class="kicker">Jun 2026 · Canvas 2D · 60 fps · no libraries</p>
                     <h3>Cyberdeck</h3>
                     <p>
                         A cyberpunk live wallpaper plus a full VS Code + Claude Code theme:
@@ -199,28 +225,6 @@
                 </div>
             </article>
 
-            <article class="product reveal">
-                <a class="product-media" href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener" aria-label="Open BEACON on GitHub">
-                    <video src="assets/img/beacon-demo.mp4" poster="assets/img/beacon-demo-poster.jpg"
-                           width="1024" height="640" autoplay muted loop playsinline
-                           aria-label="BEACON — a glass-domed lighthouse diorama crossfading through six states: working, asking, idle, done, confused, resting"></video>
-                </a>
-                <div class="product-text">
-                    <p class="kicker">PySide6 · Claude Code hooks · calm-tech</p>
-                    <h3>BEACON</h3>
-                    <p>
-                        A glass-domed lighthouse that floats over your windows and mirrors your
-                        Claude Code state in real time. When the agent needs you, the dome falls
-                        to amber dusk and the beam stops sweeping and turns toward you — six
-                        states crossfade like changing weather. Run several agents and each
-                        gets a small boat; the one waiting on you sails to the front. Tuned for
-                        precision over recall, because one false alarm gets an ambient tool closed.
-                    </p>
-                    <p class="feature-links">
-                        <a href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
-                    </p>
-                </div>
-            </article>
         </div>
     </section>
 

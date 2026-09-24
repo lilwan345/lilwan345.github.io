@@ -482,17 +482,16 @@ a { color: inherit; }
 .product-text .feature-links a { color: var(--ink); }
 .product-text .feature-links a:hover { color: var(--accent); }
 
-/* An odd card left alone on the last row stretches across both columns
-   (media left, text right) so the grid never ends with a hole. */
+/* The lead card spans both columns (media left, text right). */
 @media (min-width: 821px) {
-    .product:nth-child(odd):last-child {
+    .product.wide {
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: 1.05fr 1fr;
         gap: clamp(2rem, 4vw, 3rem);
         align-items: center;
     }
-    .product:nth-child(odd):last-child .product-text { padding-top: 0; }
+    .product.wide .product-text { padding-top: 0; }
 }
 
 /* ── About: experience + skills ─────────────────────────────── */
