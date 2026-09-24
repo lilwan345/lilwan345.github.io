@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liyuan Wan — Data &amp; BI analyst who ships real products. AI for Business at USC Marshall. Revenue analytics case studies, browser tools, and creative code.">
+    <meta name="description" content="Liyuan (Leo) Wan — data analyst and builder studying AI for Business at USC. Revenue analytics case studies, LLM evaluation, and tools people actually use.">
     <title>Liyuan Wan — Data &amp; BI Analyst · Builder</title>
 
     <meta property="og:title" content="Liyuan Wan — Data &amp; BI Analyst · Builder">
-    <meta property="og:description" content="Rigorous revenue analytics in SQL and Python, plus the tools I wish existed. USC Marshall, AI for Business.">
+    <meta property="og:description" content="Rigorous analytics in SQL and Python, careful evaluation of AI systems, and the tools I wish existed. USC Marshall &amp; Viterbi, AI for Business.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lilwan345.github.io/">
 
@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <script>try { if (localStorage.getItem('theme') === 'cyber') document.documentElement.dataset.theme = 'cyber'; } catch (e) {}</script>
 </head>
@@ -43,13 +43,15 @@
 
     <!-- ═══ Hero ═══ -->
     <section class="hero container">
-        <p class="eyebrow reveal">USC Marshall · AI for Business · Los Angeles</p>
+        <p class="eyebrow reveal"><span>USC Marshall</span> · <span>AI for Business</span> · <span>Los Angeles</span></p>
         <h1 class="reveal">Data &amp; BI analyst who ships <em>real products.</em></h1>
         <p class="hero-intro reveal">
             I&rsquo;m Liyuan (Leo) Wan. I do rigorous revenue analytics in SQL and Python,
             then build the tools I wish existed along the way — from browser utilities to
             an AI agent that writes its own SQL and checks its work. I&rsquo;m most interested
-            in where careful analysis meets AI.
+            in where careful analysis meets AI. Right now I&rsquo;m a software engineering
+            intern at <a href="#about">Knovus.ai</a>, measuring and fixing how an AI study
+            platform grades student work.
         </p>
         <dl class="stat-strip reveal" aria-label="At a glance">
             <div><dt>Transactions analyzed</dt><dd><span class="num" data-count="1.85" data-decimals="2" data-suffix="M">1.85M</span></dd></div>
@@ -67,8 +69,10 @@
         <!-- Amazon -->
         <article class="feature reveal">
             <figure class="feature-media">
-                <img src="assets/img/amazon-lorenz.png" alt="Lorenz curve of revenue concentration across 5,026 U.S. Amazon households, Gini 0.528"
-                     width="1994" height="1505">
+                <a href="assets/img/amazon-lorenz.png" target="_blank" rel="noopener" aria-label="Open the Lorenz curve full size">
+                    <img src="assets/img/amazon-lorenz.png" alt="Lorenz curve of revenue concentration across 5,026 U.S. Amazon households, Gini 0.528"
+                         width="1994" height="1505">
+                </a>
                 <figcaption>Lorenz curve, panel of 5,026 households — top 10% drive 35.9% of GMV.</figcaption>
             </figure>
             <div class="feature-text">
@@ -81,8 +85,9 @@
                 </p>
                 <ul class="findings">
                     <li>Top 10% of households drive <strong>35.9% of GMV</strong> (Gini 0.528) — and the gap is ~95% purchase frequency, not basket size.</li>
-                    <li>Mid-spend deciles 6–9 hold <strong>64% of revenue-at-risk</strong> on just 14% of GMV — retention budgets usually aim at the wrong tier.</li>
-                    <li>Every headline number ships with a bootstrap 95% CI; every aggregate is cross-checked byte-for-byte between SQL and Python.</li>
+                    <li>Mid-spend deciles 6–9 hold <strong>64% of revenue-at-risk</strong> on just 14% of GMV — the households worth protecting aren&rsquo;t the top spenders.</li>
+                    <li>Caught a silent data failure midway: the raw file had been cut at a spreadsheet&rsquo;s <strong>1,048,576-row limit</strong>, dropping 43% of rows. Re-ran everything on the full file and added a preflight that fails loudly on a partial one.</li>
+                    <li>Bootstrap 95% CIs on the demographic, model and category results; SQL and Python cross-check each other on every aggregate.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/amazon-revenue-analytics" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -119,8 +124,10 @@
         <!-- Text-to-SQL Agent -->
         <article class="feature reveal">
             <figure class="feature-media">
-                <img src="assets/img/text-to-sql-agent.png" alt="Workflow diagram of the Text-to-SQL agent loop: Claude writes SQL, runs it read-only, reads its own errors, and decides when it is done"
-                     width="2400" height="1320" loading="lazy">
+                <a href="assets/img/text-to-sql-agent.png" target="_blank" rel="noopener" aria-label="Open the agent-loop diagram full size">
+                    <img src="assets/img/text-to-sql-agent.png" alt="Workflow diagram of the Text-to-SQL agent loop: Claude writes SQL, runs it read-only, reads its own errors, and decides when it is done"
+                         width="2400" height="1320" loading="lazy">
+                </a>
                 <figcaption>The loop: Claude writes the SQL, runs it read-only, reads its own errors, and decides when it&rsquo;s done.</figcaption>
             </figure>
             <div class="feature-text">
@@ -199,13 +206,15 @@
                            aria-label="BEACON — a glass-domed lighthouse diorama crossfading through six states: working, asking, idle, done, confused, resting"></video>
                 </a>
                 <div class="product-text">
-                    <p class="kicker">PySide6 · live desktop overlay · calm-tech</p>
+                    <p class="kicker">PySide6 · Claude Code hooks · calm-tech</p>
                     <h3>BEACON</h3>
                     <p>
                         A glass-domed lighthouse that floats over your windows and mirrors your
                         Claude Code state in real time. When the agent needs you, the dome falls
                         to amber dusk and the beam stops sweeping and turns toward you — six
-                        states crossfade like changing weather.
+                        states crossfade like changing weather. Run several agents and each
+                        gets a small boat; the one waiting on you sails to the front. Tuned for
+                        precision over recall, because one false alarm gets an ambient tool closed.
                     </p>
                     <p class="feature-links">
                         <a href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -226,6 +235,24 @@
             <div class="experience reveal">
                 <h3 class="block-title">Experience</h3>
                 <article class="xp">
+                    <p class="xp-date">Sep 2026 – Present</p>
+                    <h4>Knovus.ai <span>· Software Engineering Intern, Los Angeles</span></h4>
+                    <p>An AI study platform. Before proposing a fix, I measured whether its
+                       practice-question bank was usable (blind, independent model reviews across
+                       16 courses) and traced the failures to a schema assumption, not the model.
+                       Built the fix, now in review: a verbatim question schema and a grader that
+                       solves each problem before reading the student&rsquo;s answer (FastAPI +
+                       Next.js, 30 tests). When the grader&rsquo;s first evaluation scored a
+                       suspicious 100%, I made the tests harder: 97.5% accuracy, 5% false positives.</p>
+                </article>
+                <article class="xp">
+                    <p class="xp-date">Sep 2026 – Present</p>
+                    <h4>USC Marshall, Data Sciences &amp; Operations <span>· Tutor, BUAD 312</span></h4>
+                    <p>Selected by the department to tutor undergraduates one on one in
+                       Statistics &amp; Data Science for Business: probability, hypothesis
+                       testing, and regression.</p>
+                </article>
+                <article class="xp">
                     <p class="xp-date">Sep – Dec 2025</p>
                     <h4>Marshall Artificial Intelligence Association <span>· Member, Los Angeles</span></h4>
                     <p>Terminal and Git fundamentals, GitHub workflows, and AI-assisted
@@ -241,12 +268,20 @@
             </div>
 
             <div class="skills reveal">
+                <h3 class="block-title">Education</h3>
+                <article class="xp edu">
+                    <p class="xp-date">Expected May 2029</p>
+                    <h4>University of Southern California <span>· Marshall &amp; Viterbi</span></h4>
+                    <p>B.S. Artificial Intelligence for Business · GPA 4.0/4.0<br>
+                       Dean&rsquo;s List · Alec Gores Scholarship · Phi Kappa Phi Sophomore Recognition</p>
+                </article>
+
                 <h3 class="block-title">Toolkit</h3>
                 <dl class="skill-list">
-                    <div><dt>Programming</dt><dd>Python (pandas, NumPy), SQL, R, C++</dd></div>
-                    <div><dt>Data &amp; BI</dt><dd>Tableau, Excel, EDA &amp; visualization</dd></div>
-                    <div><dt>Statistics</dt><dd>Regression, A/B testing, hypothesis testing, bootstrap CIs</dd></div>
-                    <div><dt>AI</dt><dd>LLM workflows, AI agents, LLM evals — learning in public</dd></div>
+                    <div><dt>AI</dt><dd>LLM evaluation, adversarial test design, failure-mode analysis, tool-calling agents (Claude, OpenAI, Gemini)</dd></div>
+                    <div><dt>Programming</dt><dd>Python (FastAPI, Pydantic, pandas, scikit-learn), SQL / PostgreSQL, TypeScript / Next.js, R, C++</dd></div>
+                    <div><dt>Data &amp; BI</dt><dd>DuckDB, Polars, Tableau, bootstrap CIs, regression &amp; hypothesis testing</dd></div>
+                    <div><dt>Engineering</dt><dd>Git, pytest, Docker</dd></div>
                 </dl>
             </div>
         </div>
