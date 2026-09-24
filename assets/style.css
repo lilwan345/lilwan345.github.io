@@ -64,6 +64,10 @@
 
 html { scroll-behavior: smooth; }
 
+/* In-page links (Work / About / Contact) land below the sticky masthead
+   instead of hiding the section label under it. */
+section[id], footer[id] { scroll-margin-top: 4.5rem; }
+
 body {
     font-family: var(--sans);
     font-size: 1rem;
@@ -200,6 +204,8 @@ a { color: inherit; }
     padding-bottom: clamp(3.5rem, 10vh, 7rem);
 }
 
+.eyebrow span { white-space: nowrap; }   /* wrap between items, never inside one */
+
 .eyebrow {
     font-family: var(--mono);
     font-size: .78rem;
@@ -229,6 +235,8 @@ a { color: inherit; }
     font-size: 1.05rem;
     color: var(--muted);
 }
+.hero-intro a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: .2em; }
+.hero-intro a:hover { color: var(--accent); }
 
 .stat-strip {
     display: flex;
@@ -328,6 +336,8 @@ a { color: inherit; }
 .feature:first-of-type { border-top: none; padding-top: 0; }
 
 .feature.flip .feature-media { order: 2; }
+
+.feature-media a { display: block; cursor: zoom-in; }
 
 .feature-media img {
     width: 100%;
@@ -451,8 +461,11 @@ a { color: inherit; }
     transition: transform .4s ease-out;
 }
 
-.product-media:hover img,
-.product-media:hover video { transform: scale(1.025); }
+/* Hover zoom only where hover exists (on touch screens it would stick after a tap). */
+@media (hover: hover) {
+    .product-media:hover img,
+    .product-media:hover video { transform: scale(1.025); }
+}
 
 @media (prefers-reduced-motion: reduce) {
     .product-media img,
@@ -528,6 +541,9 @@ a { color: inherit; }
 }
 
 .xp p { font-size: .92rem; color: var(--muted); }
+
+.edu { margin-bottom: 2.75rem; }
+.edu p { line-height: 1.75; }
 
 .skill-list { display: flex; flex-direction: column; }
 
@@ -612,6 +628,24 @@ a { color: inherit; }
     line-height: 1.8;
 }
 
+/* ── Touch: comfortable tap targets ─────────────────────────────
+   The small mono links read best at their size, so instead of padding
+   them (which would shift the underlines) an invisible ::after grows the
+   hit area to ~44px tall. */
+
+@media (pointer: coarse) {
+    .masthead-name, .masthead nav a, .theme-toggle,
+    .feature-links a, .colophon-links a, .big-email {
+        position: relative;
+    }
+    .masthead-name::after, .masthead nav a::after, .theme-toggle::after,
+    .feature-links a::after, .colophon-links a::after, .big-email::after {
+        content: '';
+        position: absolute;
+        inset: -.75rem -.35rem;
+    }
+}
+
 /* ── Responsive ─────────────────────────────────────────────── */
 
 @media (max-width: 820px) {
@@ -626,6 +660,7 @@ a { color: inherit; }
 }
 
 @media (max-width: 480px) {
+    .hero { padding-top: 3.25rem; }   /* get the headline and stats above the fold */
     .masthead nav { gap: 1.1rem; }
     .masthead nav a { font-size: .72rem; }
     .masthead-name { font-size: .72rem; white-space: nowrap; }
