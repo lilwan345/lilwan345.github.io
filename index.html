@@ -50,7 +50,7 @@
             then build the tools I wish existed along the way — from browser utilities to
             an AI agent that writes its own SQL and checks its work. I&rsquo;m most interested
             in where careful analysis meets AI. Right now I&rsquo;m a software engineering
-            intern at <a href="#about">Knovus.ai</a>, measuring and fixing how an AI study
+            intern at <a href="#knovus">Knovus.ai</a>, measuring and fixing how an AI study
             platform grades student work.
         </p>
         <dl class="stat-strip reveal" aria-label="At a glance">
@@ -66,8 +66,32 @@
             <h2>Analysis you can audit.</h2>
         </header>
 
+        <!-- Knovus.ai -->
+        <article id="knovus" class="feature reveal">
+            <figure class="feature-media">
+                <a href="assets/img/knovus-eval.svg" target="_blank" rel="noopener" aria-label="Open the grader-evaluation diagram full size">
+                    <img src="assets/img/knovus-eval.svg" alt="Four steps: measure the question bank first, fix the cause, a first evaluation round where everything scored 100% and was treated as a failed test, then a harder second round at 97.5% accuracy and 5% false positives"
+                         width="1600" height="1000">
+                </a>
+                <figcaption>How I tested a grader when production held no student answers to check it against.</figcaption>
+            </figure>
+            <div class="feature-text">
+                <p class="kicker">Sep 2026 – Present · Internship · FastAPI · Next.js · LLM evaluation</p>
+                <h3>Knovus.ai — Fixing How an AI Grades</h3>
+                <p class="standfirst">
+                    Knovus is an AI study platform. My first project was its practice questions:
+                    find out whether they were usable, fix what wasn&rsquo;t, and prove the fix works.
+                </p>
+                <ul class="findings">
+                    <li>Measured before proposing anything: blind, independent model reviews of the question bank, which traced the problems to a <strong>schema assumption, not the model</strong>.</li>
+                    <li>Built the fix, now in review: a verbatim question schema and a grader that solves each problem itself <strong>before</strong> it reads the student&rsquo;s answer, with 30 tests.</li>
+                    <li>The first evaluation scored a suspicious <strong>100%</strong> on every strategy, so I reported it as a failed test and made the cases harder: <strong>97.5% accuracy, 5% false positives</strong>.</li>
+                </ul>
+            </div>
+        </article>
+
         <!-- Amazon -->
-        <article class="feature reveal">
+        <article class="feature flip reveal">
             <figure class="feature-media">
                 <a href="assets/img/amazon-lorenz.png" target="_blank" rel="noopener" aria-label="Open the Lorenz curve full size">
                     <img src="assets/img/amazon-lorenz.png" alt="Lorenz curve of revenue concentration across 5,026 U.S. Amazon households, Gini 0.528"
@@ -97,7 +121,7 @@
         </article>
 
         <!-- Olist -->
-        <article class="feature flip reveal">
+        <article class="feature reveal">
             <figure class="feature-media">
                 <a href="assets/img/olist-monthly-revenue.png" target="_blank" rel="noopener" aria-label="Open the monthly revenue chart full size">
                     <img src="assets/img/olist-monthly-revenue.png" alt="Monthly Olist marketplace revenue in BRL, 2017 to 2018: a steep ramp-up through 2017, then a plateau near one million per month"
@@ -125,7 +149,7 @@
         </article>
 
         <!-- Text-to-SQL Agent -->
-        <article class="feature reveal">
+        <article class="feature flip reveal">
             <figure class="feature-media">
                 <a href="assets/img/text-to-sql-workflow.png" target="_blank" rel="noopener" aria-label="Open the agent-loop diagram full size">
                     <img src="assets/img/text-to-sql-workflow.png" alt="Five-step diagram of the Text-to-SQL agent: you ask, fetch schema, Claude writes SQL, run read-only (on a SQL error, read it and retry), then a self-check before answering"
@@ -241,13 +265,9 @@
                 <article class="xp">
                     <p class="xp-date">Sep 2026 – Present</p>
                     <h4>Knovus.ai <span>· Software Engineering Intern, Los Angeles</span></h4>
-                    <p>An AI study platform. Before proposing a fix, I measured whether its
-                       practice-question bank was usable (blind, independent model reviews across
-                       16 courses) and traced the failures to a schema assumption, not the model.
-                       Built the fix, now in review: a verbatim question schema and a grader that
-                       solves each problem before reading the student&rsquo;s answer (FastAPI +
-                       Next.js, 30 tests). When the grader&rsquo;s first evaluation scored a
-                       suspicious 100%, I made the tests harder: 97.5% accuracy, 5% false positives.</p>
+                    <p>An AI study platform. I measure and fix how it builds and grades practice
+                       questions, in Python/FastAPI and Next.js/TypeScript.
+                       <a href="#knovus">Details above&nbsp;↑</a></p>
                 </article>
                 <article class="xp">
                     <p class="xp-date">Sep 2026 – Present</p>

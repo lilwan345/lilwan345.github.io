@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <style>
+    text { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; fill: #1a1713; }
+    .eyebrow { font-size: 26px; fill: #c2410c; letter-spacing: 1px; }
+    .title { font-size: 50px; font-weight: 700; }
+    .sub { font-size: 24px; fill: #6b6356; }
+    .head { font-size: 30px; font-weight: 700; text-anchor: middle; }
+    .body { font-size: 22px; fill: #6b6356; text-anchor: middle; }
+    .num { font-size: 22px; font-weight: 700; fill: #faf7f2; text-anchor: middle; }
+    .hot { fill: #c2410c; }
+    .note { font-size: 22px; fill: #c2410c; text-anchor: middle; }
+  </style>
+  <rect width="1600" height="1000" fill="#faf7f2"/>
+
+  <text x="70" y="95" class="eyebrow">KNOVUS.AI · SOFTWARE ENGINEERING INTERNSHIP</text>
+  <text x="70" y="170" class="title">Testing a grader with no answer key</text>
+  <text x="70" y="220" class="sub">Production had zero student answers, so the evaluation had to be built from scratch.</text>
+
+  <g stroke="#1a1713" stroke-width="4" fill="none">
+    <path d="M400 530 H430"/><path d="M770 530 H800"/><path d="M1140 530 H1170"/>
+  </g>
+  <g fill="#1a1713">
+    <path d="M430 520 L446 530 L430 540 Z"/><path d="M800 520 L816 530 L800 540 Z"/><path d="M1140 520 L1156 530 L1140 540 Z"/>
+  </g>
+
+  <g fill="#fff" stroke="#d6cfc3" stroke-width="3">
+    <rect x="70" y="400" width="320" height="260" rx="18"/>
+    <rect x="450" y="400" width="310" height="260" rx="18"/>
+    <rect x="820" y="400" width="310" height="260" rx="18"/>
+  </g>
+  <rect x="1170" y="400" width="360" height="260" rx="18" fill="#fff" stroke="#c2410c" stroke-width="4"/>
+
+  <g fill="#c2410c">
+    <circle cx="100" cy="430" r="22"/><circle cx="480" cy="430" r="22"/>
+    <circle cx="850" cy="430" r="22"/><circle cx="1200" cy="430" r="22"/>
+  </g>
+  <text x="100" y="438" class="num">1</text><text x="480" y="438" class="num">2</text>
+  <text x="850" y="438" class="num">3</text><text x="1200" y="438" class="num">4</text>
+
+  <text x="230" y="495" class="head">Measure first</text>
+  <text x="230" y="560" class="body">blind, independent</text>
+  <text x="230" y="592" class="body">model reviews of</text>
+  <text x="230" y="624" class="body">the question bank</text>
+
+  <text x="605" y="495" class="head">Fix the cause</text>
+  <text x="605" y="560" class="body">verbatim schema +</text>
+  <text x="605" y="592" class="body">a grader that solves</text>
+  <text x="605" y="624" class="body">before it reads</text>
+
+  <text x="975" y="495" class="head">Round 1: 100%</text>
+  <text x="975" y="560" class="body">every strategy</text>
+  <text x="975" y="592" class="body">passed, so the test</text>
+  <text x="975" y="624" class="body">was too easy</text>
+
+  <text x="1350" y="495" class="head hot">Round 2</text>
+  <text x="1350" y="560" class="body">harder conditions:</text>
+  <text x="1350" y="592" class="body" style="fill:#1a1713;font-weight:700">97.5% accuracy</text>
+  <text x="1350" y="624" class="body" style="fill:#1a1713;font-weight:700">5% false positives</text>
+
+  <g stroke="#c2410c" stroke-width="3" fill="none"><path d="M975 660 V740 H1350 V672"/></g>
+  <path d="M1340 676 L1350 660 L1360 676 Z" fill="#c2410c"/>
+  <text x="1162" y="790" class="note">reported as a failed experiment → rebuilt</text>
+
+  <path d="M70 880 H1530" stroke="#d6cfc3" stroke-width="3"/>
+  <text x="800" y="940" class="body">Python / FastAPI · Next.js / TypeScript · pytest · LLM evaluation</text>
+</svg>
