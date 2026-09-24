@@ -66,7 +66,7 @@ html { scroll-behavior: smooth; }
 
 /* In-page links (Work / About / Contact) land below the sticky masthead
    instead of hiding the section label under it. */
-section[id], footer[id] { scroll-margin-top: 4.5rem; }
+section[id], article[id], footer[id] { scroll-margin-top: 4.5rem; }
 
 body {
     font-family: var(--sans);
