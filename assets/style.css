@@ -58,7 +58,7 @@
 [data-theme="cyber"] .big-email:hover { color: #00eaff; }
 [data-theme="cyber"] .colophon-links a { color: #8b93b8; }
 [data-theme="cyber"] .colophon-links a:hover { color: #00eaff; }
-[data-theme="cyber"] .fine-print { border-top-color: rgba(0, 234, 255, .15); color: #6a7194; }
+[data-theme="cyber"] .fine-print { border-top-color: rgba(0, 234, 255, .15); color: #7880a4; }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

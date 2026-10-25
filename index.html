@@ -10,6 +10,29 @@
     <meta property="og:description" content="Rigorous analytics in SQL and Python, careful evaluation of AI systems, and the tools I wish existed. USC Marshall &amp; Viterbi, AI for Business.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lilwan345.github.io/">
+    <meta property="og:site_name" content="Liyuan Wan">
+    <meta property="og:image" content="https://lilwan345.github.io/assets/img/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Liyuan (Leo) Wan: Data &amp; BI analyst who ships real products. USC Marshall, AI for Business.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#faf7f2">
+    <link rel="canonical" href="https://lilwan345.github.io/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Liyuan Wan",
+        "alternateName": "Leo Wan",
+        "url": "https://lilwan345.github.io/",
+        "email": "mailto:leowan@usc.edu",
+        "jobTitle": "Data & BI Analyst",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "University of Southern California" },
+        "knowsAbout": ["SQL", "Python", "Business intelligence", "LLM evaluation", "Revenue analytics"],
+        "sameAs": ["https://github.com/lilwan345", "https://www.linkedin.com/in/liyuan-wan-b64246381/"]
+    }
+    </script>
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23faf7f2'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%231a1713' text-anchor='middle'%3ELW%3C/text%3E%3C/svg%3E">
 
@@ -100,7 +123,9 @@
         <article class="feature flip reveal">
             <figure class="feature-media">
                 <a href="assets/img/amazon-lorenz.png" target="_blank" rel="noopener" aria-label="Open the Lorenz curve full size">
-                    <img src="assets/img/amazon-lorenz.png" alt="Lorenz curve of revenue concentration across 5,026 U.S. Amazon households, Gini 0.528"
+                    <img src="assets/img/amazon-lorenz-1000.png" srcset="assets/img/amazon-lorenz-1000.png 1000w, assets/img/amazon-lorenz.png 1994w"
+                         sizes="(min-width: 820px) 486px, 100vw"
+                         alt="Lorenz curve of revenue concentration across 5,026 U.S. Amazon households, Gini 0.528"
                          width="1994" height="1505">
                 </a>
                 <figcaption>Lorenz curve, panel of 5,026 households — top 10% drive 35.9% of GMV.</figcaption>
@@ -117,7 +142,7 @@
                     <li>Top 10% of households drive <strong>35.9% of GMV</strong> (Gini 0.528) — and the gap is ~95% purchase frequency, not basket size.</li>
                     <li>Mid-spend deciles 6–9 hold <strong>64% of revenue-at-risk</strong> on just 14% of GMV — the households worth protecting aren&rsquo;t the top spenders.</li>
                     <li>Caught a silent data failure midway: the raw file had been cut at a spreadsheet&rsquo;s <strong>1,048,576-row limit</strong>, dropping 43% of rows. Re-ran everything on the full file and added a preflight that fails loudly on a partial one.</li>
-                    <li>Bootstrap 95% CIs on the demographic, model and category results; SQL and Python cross-check each other on every aggregate.</li>
+                    <li>The drop-off model holds up on households it never saw: <strong>AUC 0.90</strong> under 5-fold cross-validation, versus 0.53 with shuffled labels. Bootstrap 95% CIs on the demographic, model and category results, and SQL and Python cross-check each other on every aggregate.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/amazon-revenue-analytics" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -130,17 +155,18 @@
         <article class="feature reveal">
             <figure class="feature-media">
                 <a href="assets/img/olist-monthly-revenue.png" target="_blank" rel="noopener" aria-label="Open the monthly revenue chart full size">
-                    <img src="assets/img/olist-monthly-revenue.png" alt="Monthly Olist marketplace revenue in BRL, 2017 to 2018: a steep ramp-up through 2017, then a plateau near one million per month"
+                    <img src="assets/img/olist-monthly-revenue-1000.png" srcset="assets/img/olist-monthly-revenue-1000.png 1000w, assets/img/olist-monthly-revenue.png 1344w"
+                         sizes="(min-width: 820px) 486px, 100vw" alt="Monthly Olist marketplace revenue in BRL, 2017 to 2018: a steep ramp-up through 2017, then a plateau near one million per month"
                          width="1344" height="960" loading="lazy">
                 </a>
-                <figcaption>Monthly revenue, 99K+ orders, 2017–2018: a steep ramp-up, then a plateau near R$1M a month.</figcaption>
+                <figcaption>Monthly revenue from 96K+ delivered orders, 2017–2018: a steep ramp-up, then a plateau near R$1M a month.</figcaption>
             </figure>
             <div class="feature-text">
                 <p class="kicker">Jan – Apr 2026 · PostgreSQL · R (tidyverse) · HTML/JS</p>
                 <h3>Marketplace Revenue Risk — Olist</h3>
                 <p class="standfirst">
-                    Revenue stability, concentration, and cash-flow timing across 99K+
-                    transactions on a Brazilian marketplace, quantified with
+                    Revenue stability, concentration, and cash-flow timing across 96K+
+                    delivered orders on a Brazilian marketplace, quantified with
                     industry-standard measures.
                 </p>
                 <ul class="findings">
@@ -158,13 +184,14 @@
         <article class="feature flip reveal">
             <figure class="feature-media">
                 <a href="assets/img/text-to-sql-workflow.png" target="_blank" rel="noopener" aria-label="Open the agent-loop diagram full size">
-                    <img src="assets/img/text-to-sql-workflow.png" alt="Five-step diagram of the Text-to-SQL agent: you ask, fetch schema, Claude writes SQL, run read-only (on a SQL error, read it and retry), then a self-check before answering"
+                    <img src="assets/img/text-to-sql-workflow-1280.png" srcset="assets/img/text-to-sql-workflow-1280.png 1280w, assets/img/text-to-sql-workflow.png 2560w"
+                         sizes="(min-width: 820px) 486px, 100vw" alt="Five-step diagram of the Text-to-SQL agent: you ask, fetch schema, Claude writes SQL, run read-only (on a SQL error, read it and retry), then a self-check before answering"
                          width="2560" height="1600" loading="lazy">
                 </a>
                 <figcaption>The loop: Claude writes the SQL, runs it read-only, reads its own errors, and decides when it&rsquo;s done.</figcaption>
             </figure>
             <div class="feature-text">
-                <p class="kicker">Jun – Jul 2026 · Python · Claude API · SQLite</p>
+                <p class="kicker">Jun – Jul 2026 · Python · Claude API · SQLite · pytest</p>
                 <h3>Text-to-SQL Agent</h3>
                 <p class="standfirst">
                     Ask a question in plain English; the agent writes the SQL, executes it against a
@@ -174,7 +201,7 @@
                 <ul class="findings">
                     <li><strong>10/10</strong> on a clean benchmark (simple counts up to 4-table joins) and <strong>8/8 correct SQL</strong> on an adversarial set — synonym traps, temporal filters, NULLs, ambiguous metrics — all against independently computed ground truth.</li>
                     <li>The adversarial set exposed a <strong>confident-guessing failure mode</strong>: on vague questions the agent silently picks one interpretation instead of flagging it — the exact risk that matters for self-serve BI.</li>
-                    <li>A second-pass self-check reviews each answer against the SQL and schema, turning silently-wrong answers into flagged ones.</li>
+                    <li>A second-pass self-check reviews each answer against the SQL and schema, turning silently-wrong answers into flagged ones. 48 offline tests (a scripted fake client, no API key) run in CI on every push.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/text-to-sql-agent" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -216,7 +243,8 @@
 
             <article class="product reveal">
                 <a class="product-media" href="https://lilwan345.github.io/tinytools/" target="_blank" rel="noopener" aria-label="Open tinytools live site">
-                    <img src="assets/img/tinytools.jpg" alt="tinytools homepage — fast, free tools that run entirely in your browser"
+                    <img src="assets/img/tinytools-960.jpg" srcset="assets/img/tinytools-960.jpg 960w, assets/img/tinytools.jpg 1280w"
+                         sizes="(min-width: 820px) 482px, 100vw" alt="tinytools homepage — fast, free tools that run entirely in your browser"
                          width="1280" height="800" loading="lazy">
                 </a>
                 <div class="product-text">
@@ -237,7 +265,8 @@
             <article class="product reveal">
                 <a class="product-media" id="cyberdeck-media" href="https://lilwan345.github.io/claude-code-cyberpunk/wallpaper/" target="_blank" rel="noopener" aria-label="Open Cyberdeck live wallpaper"
                    data-live="https://lilwan345.github.io/claude-code-cyberpunk/wallpaper/">
-                    <img src="assets/img/cyberdeck.jpg" alt="Cyberdeck — neon cyberpunk skyline with synthwave sun, rendered live in Canvas 2D"
+                    <img src="assets/img/cyberdeck-960.jpg" srcset="assets/img/cyberdeck-960.jpg 960w, assets/img/cyberdeck.jpg 1280w"
+                         sizes="(min-width: 820px) 482px, 100vw" alt="Cyberdeck — neon cyberpunk skyline with synthwave sun, rendered live in Canvas 2D"
                          width="1280" height="800" loading="lazy">
                 </a>
                 <div class="product-text">
