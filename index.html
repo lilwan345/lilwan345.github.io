@@ -96,10 +96,10 @@
                     <img src="assets/img/knovus-card.jpg" alt="A Knovus practice card: an accounting multiple-choice question about a partial refund, copied word for word from the course file, with the student's answer marked correct and a worked explanation below"
                          width="864" height="604">
                 </a>
-                <figcaption>A practice card: the question copied from the student&rsquo;s own file, then graded. My branch is in review.</figcaption>
+                <figcaption>A practice card from my first version: the question copied word for word from the student&rsquo;s own file, then graded.</figcaption>
             </figure>
             <div class="feature-text">
-                <p class="kicker">Sep 2026 – Present · Internship · FastAPI · Next.js · LLM evaluation</p>
+                <p class="kicker">Sep 2026 – Present · Internship · FastAPI · Next.js · pytest · LLM evaluation</p>
                 <h3>Knovus.ai — Making Practice Questions Answerable</h3>
                 <p class="standfirst">
                     Knovus is an AI study platform that turns a student&rsquo;s course files into lessons
@@ -107,11 +107,12 @@
                     actually answer them, fix what isn&rsquo;t working, and prove the fix works.
                 </p>
                 <ul class="findings">
-                    <li>Audited 90 stored questions across 16 courses: <strong>53% couldn&rsquo;t be fully attempted</strong>. The cause was a schema with no field for the full question, not the model.</li>
-                    <li>Shipped the fix my manager chose, grading each question off its original page, so about 2,400 questions needed no re-extraction. Live since Oct 1; he later extended it to PPT and Word.</li>
-                    <li>A page often holds several questions, so in round two I rebuild each one as its own card, copied word for word from the file and checked by 9 rules plus a model. Anything in doubt shows the original page instead.</li>
-                    <li>Tested on 60 random production questions: <strong>37 clean cards, 0 serious errors</strong>, and all 54 mistakes I planted were caught. The whole test cost under $0.40 in model calls. In review now.</li>
-                    <li>My first grader evaluation scored a suspicious <strong>100%</strong> on every strategy, so I reported it as a failed test and made the cases harder: <strong>97.5% accuracy, 5% false positives</strong>.</li>
+                    <li>Sampled 90 stored questions across 16 courses, each judged by three independent reviews: <strong>53% couldn&rsquo;t be fully attempted</strong>. The cause was a schema with no field for the full question, not the model.</li>
+                    <li>Wrote my manager a two-option proposal; he chose grading each question off its original page, which I built, so about <strong>2,400 existing questions needed no re-extraction</strong>. It was merged into the production branch on Sep 28, and he built on it with PowerPoint and Word previews.</li>
+                    <li>A page often holds several questions, so in round two I rebuilt each one as its own card, copied word for word from the file and checked by 9 rules plus a model, falling back to the original page when in doubt.</li>
+                    <li>Tested on 60 random production questions: <strong>37 clean cards, 0 serious errors</strong>, all 54 mistakes I planted caught, for about $0.37 in model calls. The one miss: it rejected 1 of 8 cards that were already right. Merged and switched on by default Oct 22; the team has since extended and reworked it.</li>
+                    <li>My first grader evaluation scored a suspicious <strong>100%</strong> across 120 gradings, so I reported it as a failed test and made the cases harder. That exposed a false positive in the cheaper grader (1 of 20 wrong answers marked right), so the grader that shipped is the slower one that solves the problem first: <strong>0&nbsp;of&nbsp;20</strong>.</li>
+                    <li>18 commits merged into the production branch across the FastAPI backend and Next.js frontend, including about 250 tests.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="assets/img/knovus-cards.svg" target="_blank" rel="noopener">How I got there, in four steps&nbsp;↗</a>

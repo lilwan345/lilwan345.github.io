@@ -53,9 +53,9 @@
   <text x="975" y="624" class="body">was too easy</text>
 
   <text x="1350" y="495" class="head hot">Round 2</text>
-  <text x="1350" y="560" class="body">harder conditions:</text>
-  <text x="1350" y="592" class="body" style="fill:#1a1713;font-weight:700">97.5% accuracy</text>
-  <text x="1350" y="624" class="body" style="fill:#1a1713;font-weight:700">5% false positives</text>
+  <text x="1350" y="560" class="body">cheap grader: 1/20</text>
+  <text x="1350" y="592" class="body">false positive, so</text>
+  <text x="1350" y="624" class="body" style="fill:#1a1713;font-weight:700">solve-first: 0/20</text>
 
   <g stroke="#c2410c" stroke-width="3" fill="none"><path d="M975 660 V740 H1350 V672"/></g>
   <path d="M1340 676 L1350 660 L1360 676 Z" fill="#c2410c"/>
