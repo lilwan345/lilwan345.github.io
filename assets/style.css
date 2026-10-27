@@ -338,6 +338,7 @@ a { color: inherit; }
 .feature.flip .feature-media { order: 2; }
 
 .feature-media a { display: block; cursor: zoom-in; }
+.feature-media a + a { margin-top: 1rem; }
 
 .feature-media img {
     width: 100%;
