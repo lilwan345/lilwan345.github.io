@@ -111,10 +111,9 @@
                     actually answer them, fix what isn&rsquo;t working, and prove the fix works.
                 </p>
                 <ul class="findings">
-                    <li>Sampled 90 stored questions across 16 courses, each judged by three independent reviews: <strong>53% couldn&rsquo;t be fully attempted</strong>. The cause was a schema with no field for the full question, not the model.</li>
-                    <li>Wrote my manager a two-option proposal; he chose grading each question off its original page, which I built, so about <strong>2,400 existing questions needed no re-extraction</strong>. It was merged into the production branch on Sep 28, and he built on it with PowerPoint and Word previews.</li>
-                    <li>A page often holds several questions, so in round two I rebuilt each one as its own card, copied word for word from the file and checked by 9 rules plus a model, falling back to the original page when in doubt.</li>
-                    <li>Tested on 60 random production questions: <strong>37 clean cards, 0 serious errors</strong>, all 54 mistakes I planted caught, for about $0.37 in model calls. The one miss: it rejected 1 of 8 cards that were already right. Merged and switched on by default Oct 22; the team has since extended and reworked it.</li>
+                    <li>Sampled 90 stored questions across 16 courses, each judged by three independent reviews: <strong>53% couldn&rsquo;t be fully attempted</strong>. The cause wasn&rsquo;t the AI model: the format the questions were saved in had no place for the full question text.</li>
+                    <li>Wrote my manager a two-option proposal; he chose grading each question against its original page in the course file, which I built, so about <strong>2,400 existing questions kept working without being reprocessed</strong>. It was merged into the production code on Sep 28, and he built on it with PowerPoint and Word previews.</li>
+                    <li>A page often holds several questions, so in round two I turned each one into its own card, copied word for word and checked by 9 rules plus a model. On 60 random production questions: <strong>37 clean cards, 0 serious errors</strong>, all 54 mistakes I planted caught, for about $0.37 in model calls (it also wrongly rejected 1 of 8 cards that were already right). Merged and switched on by default Oct 22; the team has since reworked it.</li>
                     <li>My first grader evaluation scored a suspicious <strong>100%</strong> across 120 gradings, so I reported it as a failed test and made the cases harder. That exposed a false positive in the cheaper grader (1 of 20 wrong answers marked right), so the grader that shipped is the slower one that solves the problem first: <strong>0&nbsp;of&nbsp;20</strong>.</li>
                     <li>18 commits merged into the production branch across the FastAPI backend and Next.js frontend, including about 250 tests.</li>
                 </ul>
@@ -140,14 +139,14 @@
                 <h3>Amazon Revenue Analytics</h3>
                 <p class="standfirst">
                     Where does revenue concentrate, what&rsquo;s at risk next quarter, and where
-                    should the category budget go? A three-layer BI framework over 5,026 U.S.
-                    Amazon households, 2018–2022 — about 1.85M transactions.
+                    should the category budget go? Answered in SQL and Python on about 1.85M
+                    purchases from 5,026 U.S. Amazon households, 2018–2022.
                 </p>
                 <ul class="findings">
-                    <li>Top 10% of households drive <strong>35.9% of GMV</strong> (Gini 0.528) — and the gap is ~95% purchase frequency, not basket size.</li>
-                    <li>Mid-spend deciles 6–9 hold <strong>64% of revenue-at-risk</strong> on just 14% of GMV — the households worth protecting aren&rsquo;t the top spenders.</li>
+                    <li>The top 10% of households account for <strong>35.9% of all spending</strong> (Gini 0.528), and about 95% of their lead comes from ordering more often, not from bigger orders.</li>
+                    <li>The middle-to-lower spenders (deciles 6–9 of 10) hold <strong>64% of next quarter&rsquo;s revenue-at-risk</strong> on just 14% of spending, so the households worth protecting aren&rsquo;t the top spenders.</li>
                     <li>Caught a silent data failure midway: the raw file had been cut at a spreadsheet&rsquo;s <strong>1,048,576-row limit</strong>, dropping 43% of rows. Re-ran everything on the full file and added a preflight that fails loudly on a partial one.</li>
-                    <li>The drop-off model holds up on households it never saw: <strong>AUC 0.90</strong> under 5-fold cross-validation, versus 0.53 with shuffled labels. Bootstrap 95% CIs on the demographic, model and category results, and SQL and Python cross-check each other on every aggregate.</li>
+                    <li>The drop-off model holds up on households it never saw: <strong>AUC 0.90</strong>, where 0.5 is a coin flip (and 0.53 when trained on shuffled outcomes). Key results carry 95% confidence intervals, and SQL and Python cross-check every total.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/amazon-revenue-analytics" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -170,13 +169,14 @@
                 <p class="kicker">Jan – Apr 2026 · PostgreSQL · R (tidyverse) · HTML/JS</p>
                 <h3>Marketplace Revenue Risk — Olist</h3>
                 <p class="standfirst">
-                    Revenue stability, concentration, and cash-flow timing across 96K+
-                    delivered orders on a Brazilian marketplace, quantified with
-                    industry-standard measures.
+                    How steady a Brazilian marketplace&rsquo;s revenue is, how much of it
+                    depends on one region and a few big orders, and how long the cash
+                    takes to arrive, across 96K+ delivered orders.
                 </p>
                 <ul class="findings">
-                    <li>Top 10% of customers drive <strong>38% of revenue</strong> — Gini 0.475, HHI 0.18, CV 0.42.</li>
-                    <li>São Paulo alone drives <strong>37% of revenue</strong>, and ~64% of revenue arrives in installments (avg 4.12) — a long working-capital cycle.</li>
+                    <li>The top 10% of orders bring in <strong>38% of revenue</strong> (Gini 0.475), and São Paulo alone brings in <strong>37%</strong>.</li>
+                    <li>About 64% of revenue is paid in installments, 4.12 on average, so cash arrives well after the sale.</li>
+                    <li>Monthly revenue swings a lot (CV 0.42), but much of that is 2017&rsquo;s fast growth; with the trend removed, the swings are smaller.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/Marketplace-Revenue-Risk-Financial-Stability-Analysis" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -189,11 +189,11 @@
         <article class="feature flip reveal">
             <figure class="feature-media">
                 <a href="assets/img/text-to-sql-workflow.png" target="_blank" rel="noopener" aria-label="Open the agent-loop diagram full size">
-                    <img src="assets/img/text-to-sql-workflow-1280.png" srcset="assets/img/text-to-sql-workflow-1280.png 1280w, assets/img/text-to-sql-workflow.png 2560w"
-                         sizes="(min-width: 820px) 486px, 100vw" alt="Five-step diagram of the Text-to-SQL agent: you ask, fetch schema, Claude writes SQL, run read-only (on a SQL error, read it and retry), then a self-check before answering"
-                         width="2560" height="1600" loading="lazy">
+                    <img src="assets/img/text-to-sql-workflow-1280.png" srcset="assets/img/text-to-sql-workflow-1280.png 1280w, assets/img/text-to-sql-workflow.png 2400w"
+                         sizes="(min-width: 820px) 486px, 100vw" alt="Six steps: you ask in plain English; every table and column name goes into Claude's instructions; Claude writes SQL; it runs read-only, and on an error goes back to Claude to fix; a second Claude call checks the answer; you get the answer, with a warning if the check found a mismatch"
+                         width="2400" height="1800" loading="lazy">
                 </a>
-                <figcaption>The loop: Claude writes the SQL, runs it read-only, reads its own errors, and decides when it&rsquo;s done.</figcaption>
+                <figcaption>Steps 3 and 4 are the loop: Claude writes the SQL, reads any error, fixes it, and decides when it&rsquo;s done.</figcaption>
             </figure>
             <div class="feature-text">
                 <p class="kicker">Jun – Jul 2026 · Python · Claude API · SQLite · pytest</p>
@@ -204,9 +204,9 @@
                     work — then tested like a BI tool, not a demo.
                 </p>
                 <ul class="findings">
-                    <li><strong>10/10</strong> on a clean benchmark (simple counts up to 4-table joins) and <strong>8/8 correct SQL</strong> on an adversarial set — synonym traps, temporal filters, NULLs, ambiguous metrics — all against independently computed ground truth.</li>
-                    <li>The adversarial set exposed a <strong>confident-guessing failure mode</strong>: on vague questions the agent silently picks one interpretation instead of flagging it — the exact risk that matters for self-serve BI.</li>
-                    <li>A second-pass self-check reviews each answer against the SQL and schema, turning silently-wrong answers into flagged ones. 48 offline tests (a scripted fake client, no API key) run in CI on every push.</li>
+                    <li><strong>10/10</strong> on a clean benchmark (simple counts up to 4-table joins) and <strong>8/8 correct SQL</strong> on a set of trick questions (synonyms, date filters, missing values, vague metrics), all checked against answers I computed myself.</li>
+                    <li>The trick questions exposed a <strong>confident-guessing failure mode</strong>: on vague questions the agent silently picks one reading instead of saying which, the exact risk that matters when non-analysts ask their own questions.</li>
+                    <li>A second check reviews each answer against the SQL that ran, so a quietly wrong answer comes with a warning instead. 48 automated tests (no API key needed) run on every push.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/text-to-sql-agent" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
