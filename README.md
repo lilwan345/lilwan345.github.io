@@ -1,27 +1,29 @@
 # lilwan345.github.io
 
-My portfolio: **[lilwan345.github.io](https://lilwan345.github.io)**
+This is my portfolio: **[lilwan345.github.io](https://lilwan345.github.io)**
 
-Case studies (Knovus.ai, Amazon revenue analytics, Olist marketplace risk, a
-Text-to-SQL agent), shipped side projects (Beacon, tinytools, Cyberdeck),
-experience and contact.
+It has my case studies (Knovus.ai, Amazon revenue analytics, the Olist
+marketplace risk project and a Text-to-SQL agent), the side projects I've
+shipped (Beacon, tinytools, Cyberdeck), plus my experience and how to reach me.
 
 ## How it's built
 
-- One hand-written page: `index.html`, `assets/style.css`, `assets/main.js`.
-  No framework, no build step, no trackers or cookies.
-- Two themes: the default editorial light theme and a "Cyberdeck" mode
-  (toggle in the header, remembered in `localStorage`).
-- Small touches, all of which respect `prefers-reduced-motion`: scroll
-  reveal, a count-up on the hero numbers, and a live preview of the Cyberdeck
-  wallpaper on desktop.
-- Images are served at display size (`srcset`), with the full-resolution
-  versions one click away.
-- Social preview card, structured data, sitemap and a matching 404 page.
-- Checked with axe-core in both themes (no WCAG 2 A/AA violations) and at
-  phone width (no horizontal scroll).
+- It's one hand-written page: `index.html`, `assets/style.css` and
+  `assets/main.js`. No framework, no build step, and no trackers or cookies.
+- There's two themes, the default light one and a "Cyberdeck" mode. You can
+  switch with the button in the header and it remembers your choice
+  (`localStorage`).
+- A few small touches like scroll reveal, a count-up on the hero numbers and a
+  live preview of the Cyberdeck wallpaper on desktop. All of them turn off if
+  you have reduced motion on.
+- Images load at the size they're shown (`srcset`), and the full-size version
+  is one click away.
+- It has a social preview card, structured data, a sitemap and a matching 404
+  page.
+- I checked it with axe-core in both themes (no WCAG 2 A/AA issues) and at
+  phone width (no sideways scrolling).
 
-## Run locally
+## Run it locally
 
 ```bash
 python3 -m http.server 8000   # then open http://localhost:8000

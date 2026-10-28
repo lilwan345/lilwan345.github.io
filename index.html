@@ -69,12 +69,12 @@
         <p class="eyebrow reveal"><span>USC Marshall</span> · <span>AI for Business</span> · <span>Los Angeles</span></p>
         <h1 class="reveal">Data &amp; BI analyst who ships <em>real products.</em></h1>
         <p class="hero-intro reveal">
-            I&rsquo;m Liyuan (Leo) Wan. I do rigorous revenue analytics in SQL and Python,
-            then build the tools I wish existed along the way — from browser utilities to
-            an AI agent that writes its own SQL and checks its work. I&rsquo;m most interested
-            in where careful analysis meets AI. Right now I&rsquo;m a software engineering
-            intern at <a href="#knovus">Knovus.ai</a>, measuring and fixing the practice
-            questions on an AI study platform.
+            Hi, I&rsquo;m Liyuan (Leo) Wan. I like digging into revenue data with SQL and
+            Python, and when I need a tool that doesn&rsquo;t exist I usually just build it,
+            from little browser utilities to an AI agent that writes its own SQL and checks
+            its work. What I care about most is where careful analysis meets AI. Right now
+            I&rsquo;m a software engineering intern at <a href="#knovus">Knovus.ai</a>, where I
+            measure and fix the practice questions on an AI study platform.
         </p>
         <dl class="stat-strip reveal" aria-label="At a glance">
             <div><dt>Transactions analyzed</dt><dd><span class="num" data-count="1.85" data-decimals="2" data-suffix="M">1.85M</span></dd></div>
@@ -104,18 +104,19 @@
             </figure>
             <div class="feature-text">
                 <p class="kicker">Sep 2026 – Present · Internship · FastAPI · Next.js · pytest · LLM evaluation</p>
-                <h3>Knovus.ai — Making Practice Questions Answerable</h3>
+                <h3>Knovus.ai: Making Practice Questions Answerable</h3>
                 <p class="standfirst">
-                    Knovus is an AI study platform that turns a student&rsquo;s course files into lessons
-                    and practice. My project is the practice questions: find out whether students can
-                    actually answer them, fix what isn&rsquo;t working, and prove the fix works.
+                    Knovus is an AI study platform that turns a student&rsquo;s course files into
+                    lessons and practice questions. My part is the practice questions: figure out
+                    if students can actually answer them, fix what&rsquo;s broken, and prove the fix
+                    works.
                 </p>
                 <ul class="findings">
-                    <li>Sampled 90 stored questions across 16 courses, each judged by three independent reviews: <strong>53% couldn&rsquo;t be fully attempted</strong>. The cause wasn&rsquo;t the AI model: the format the questions were saved in had no place for the full question text.</li>
-                    <li>Wrote my manager a two-option proposal; he chose grading each question against its original page in the course file, which I built, so about <strong>2,400 existing questions kept working without being reprocessed</strong>. It was merged into the production code on Sep 28, and he built on it with PowerPoint and Word previews.</li>
-                    <li>A page often holds several questions, so in round two I turned each one into its own card, copied word for word and checked by 9 rules plus a model. On 60 random production questions: <strong>37 clean cards, 0 serious errors</strong>, all 54 mistakes I planted caught, for about $0.37 in model calls (it also wrongly rejected 1 of 8 cards that were already right). Merged and switched on by default Oct 22; the team has since reworked it.</li>
-                    <li>My first grader evaluation scored a suspicious <strong>100%</strong> across 120 gradings, so I reported it as a failed test and made the cases harder. That exposed a false positive in the cheaper grader (1 of 20 wrong answers marked right), so the grader that shipped is the slower one that solves the problem first: <strong>0&nbsp;of&nbsp;20</strong>.</li>
-                    <li>18 commits merged into the production branch across the FastAPI backend and Next.js frontend, including about 250 tests.</li>
+                    <li>I sampled 90 stored questions across 16 courses and had each one judged by three independent reviews: <strong>53% couldn&rsquo;t be fully attempted</strong>. It wasn&rsquo;t the AI model&rsquo;s fault, the format the questions got saved in just had no place for the full question text.</li>
+                    <li>I wrote my manager a proposal with two options, and he forwarded it to the founder and the rest of the team. He picked grading each question against its original page in the course file, which I built, so about <strong>2,400 existing questions kept working without being reprocessed</strong>. It got merged into the production code on Sep 28, and he later built on it with PowerPoint and Word previews.</li>
+                    <li>A page often has several questions on it, so in round two I turned each one into its own card, copied word for word and checked by 9 rules plus a model. On 60 random production questions I got <strong>37 clean cards and 0 serious errors</strong>, it caught all 54 mistakes I planted, and it cost about $0.37 in model calls. (It also wrongly rejected 1 of 8 cards that were already fine.) It was merged and turned on by default Oct 22, and the team has reworked it since.</li>
+                    <li>My first grader test scored <strong>100%</strong> across 120 gradings, which honestly was suspicious, so I reported it as a failed test and made the cases harder. That caught the cheaper grader marking 1 of 20 wrong answers as right, so the one that shipped is the slower grader that solves the problem first: <strong>0&nbsp;of&nbsp;20</strong>.</li>
+                    <li>18 of my commits are merged into the production branch, across the FastAPI backend and the Next.js frontend, including about 250 tests.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="assets/img/knovus-cards.svg" target="_blank" rel="noopener">How I got there, in four steps&nbsp;↗</a>
@@ -132,21 +133,21 @@
                          alt="Lorenz curve of revenue concentration across 5,026 U.S. Amazon households, Gini 0.528"
                          width="1994" height="1505">
                 </a>
-                <figcaption>Lorenz curve, panel of 5,026 households — top 10% drive 35.9% of GMV.</figcaption>
+                <figcaption>Lorenz curve for the 5,026 households. The top 10% spend 35.9% of the money.</figcaption>
             </figure>
             <div class="feature-text">
                 <p class="kicker">May – Jul 2026 · SQL · DuckDB · Python · scikit-learn · Tableau</p>
                 <h3>Amazon Revenue Analytics</h3>
                 <p class="standfirst">
-                    Where does revenue concentrate, what&rsquo;s at risk next quarter, and where
-                    should the category budget go? Answered in SQL and Python on about 1.85M
+                    Where does the revenue come from, what&rsquo;s at risk next quarter, and where
+                    should the category budget go? I answered that in SQL and Python on about 1.85M
                     purchases from 5,026 U.S. Amazon households, 2018–2022.
                 </p>
                 <ul class="findings">
-                    <li>The top 10% of households account for <strong>35.9% of all spending</strong> (Gini 0.528), and about 95% of their lead comes from ordering more often, not from bigger orders.</li>
-                    <li>The middle-to-lower spenders (deciles 6–9 of 10) hold <strong>64% of next quarter&rsquo;s revenue-at-risk</strong> on just 14% of spending, so the households worth protecting aren&rsquo;t the top spenders.</li>
-                    <li>Caught a silent data failure midway: the raw file had been cut at a spreadsheet&rsquo;s <strong>1,048,576-row limit</strong>, dropping 43% of rows. Re-ran everything on the full file and added a preflight that fails loudly on a partial one.</li>
-                    <li>The drop-off model holds up on households it never saw: <strong>AUC 0.90</strong>, where 0.5 is a coin flip (and 0.53 when trained on shuffled outcomes). Key results carry 95% confidence intervals, and SQL and Python cross-check every total.</li>
+                    <li>The top 10% of households spend <strong>35.9% of all the money</strong> (Gini 0.528), and about 95% of their lead comes from ordering more often, not from bigger orders.</li>
+                    <li>The middle-to-lower spenders (deciles 6–9 of 10) hold <strong>64% of next quarter&rsquo;s revenue-at-risk</strong> but only 14% of the spending. So the households worth protecting aren&rsquo;t the top spenders.</li>
+                    <li>Halfway through I found out my raw file had been cut off at a spreadsheet&rsquo;s <strong>1,048,576-row limit</strong>, and 43% of the rows were just gone. I re-ran everything on the full file and added a check that fails loudly if it ever happens again.</li>
+                    <li>The drop-off model holds up on households it never saw: <strong>AUC 0.90</strong>, where 0.5 is a coin flip (trained on shuffled outcomes it gets 0.53). Key results have 95% confidence intervals, and SQL and Python cross-check every total.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/amazon-revenue-analytics" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -167,16 +168,16 @@
             </figure>
             <div class="feature-text">
                 <p class="kicker">Jan – Apr 2026 · PostgreSQL · R (tidyverse) · HTML/JS</p>
-                <h3>Marketplace Revenue Risk — Olist</h3>
+                <h3>Marketplace Revenue Risk: Olist</h3>
                 <p class="standfirst">
-                    How steady a Brazilian marketplace&rsquo;s revenue is, how much of it
-                    depends on one region and a few big orders, and how long the cash
-                    takes to arrive, across 96K+ delivered orders.
+                    How steady is a Brazilian marketplace&rsquo;s revenue, how much of it depends on
+                    one region and a few big orders, and how long does the cash take to show up?
+                    I looked at 96K+ delivered orders to find out.
                 </p>
                 <ul class="findings">
                     <li>The top 10% of orders bring in <strong>38% of revenue</strong> (Gini 0.475), and São Paulo alone brings in <strong>37%</strong>.</li>
-                    <li>About 64% of revenue is paid in installments, 4.12 on average, so cash arrives well after the sale.</li>
-                    <li>Monthly revenue swings a lot (CV 0.42), but much of that is 2017&rsquo;s fast growth; with the trend removed, the swings are smaller.</li>
+                    <li>About 64% of revenue gets paid in installments, 4.12 on average, so the cash shows up well after the sale.</li>
+                    <li>Monthly revenue swings a lot (CV 0.42), but a lot of that is just 2017&rsquo;s fast growth. With the trend taken out the swings are smaller.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/Marketplace-Revenue-Risk-Financial-Stability-Analysis" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -199,14 +200,14 @@
                 <p class="kicker">Jun – Jul 2026 · Python · Claude API · SQLite · pytest</p>
                 <h3>Text-to-SQL Agent</h3>
                 <p class="standfirst">
-                    Ask a question in plain English; the agent writes the SQL, executes it against a
-                    read-only database, and fixes its own errors. Built to learn how AI agents actually
-                    work — then tested like a BI tool, not a demo.
+                    You ask a question in plain English and the agent writes the SQL, runs it on a
+                    read-only database and fixes its own errors. I built it to learn how AI agents
+                    actually work, then tested it like a BI tool instead of a demo.
                 </p>
                 <ul class="findings">
-                    <li><strong>10/10</strong> on a clean benchmark (simple counts up to 4-table joins) and <strong>8/8 correct SQL</strong> on a set of trick questions (synonyms, date filters, missing values, vague metrics), all checked against answers I computed myself.</li>
-                    <li>The trick questions exposed a <strong>confident-guessing failure mode</strong>: on vague questions the agent silently picks one reading instead of saying which, the exact risk that matters when non-analysts ask their own questions.</li>
-                    <li>A second check reviews each answer against the SQL that ran, so a quietly wrong answer comes with a warning instead. 48 automated tests (no API key needed) run on every push.</li>
+                    <li><strong>10/10</strong> on normal questions (simple counts up to 4-table joins) and <strong>8/8 correct SQL</strong> on trick questions (synonyms, date filters, missing values, vague metrics), all checked against answers I computed myself.</li>
+                    <li>The trick questions turned up a <strong>confident-guessing failure mode</strong>: on a vague question the agent quietly picks one meaning and doesn&rsquo;t tell you which. That&rsquo;s exactly the risk that matters when non-analysts ask their own questions.</li>
+                    <li>A second check reviews each answer against the SQL that ran, so a quietly wrong answer comes with a warning. 48 automated tests (no API key needed) run on every push.</li>
                 </ul>
                 <p class="feature-links">
                     <a href="https://github.com/lilwan345/text-to-sql-agent" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -227,18 +228,18 @@
                 <a class="product-media" href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener" aria-label="Open BEACON on GitHub">
                     <video src="assets/img/beacon-demo.mp4" poster="assets/img/beacon-demo-poster.jpg"
                            width="1024" height="640" autoplay muted loop playsinline
-                           aria-label="BEACON — a glass-domed lighthouse diorama crossfading through six states: working, asking, idle, done, confused, resting"></video>
+                           aria-label="BEACON: a glass-domed lighthouse diorama crossfading through six states: working, asking, idle, done, confused, resting"></video>
                 </a>
                 <div class="product-text">
                     <p class="kicker">Jun 2026 · PySide6 · Claude Code hooks · calm-tech</p>
                     <h3>BEACON</h3>
                     <p>
-                        A glass-domed lighthouse that floats over your windows and mirrors your
-                        Claude Code state in real time. When the agent needs you, the dome falls
-                        to amber dusk and the beam stops sweeping and turns toward you — six
-                        states crossfade like changing weather. Run several agents and each
-                        gets a small boat; the one waiting on you sails to the front. Tuned for
-                        precision over recall, because one false alarm gets an ambient tool closed.
+                        A little glass-domed lighthouse that floats over your windows and shows
+                        what Claude Code is doing in real time. When the agent needs you, the dome
+                        turns to amber dusk and the beam stops and turns toward you. Run a few
+                        agents and each one gets a small boat, and the one waiting on you sails to
+                        the front. I tuned it for precision over recall, because after one false
+                        alarm people just close an ambient tool.
                     </p>
                     <p class="feature-links">
                         <a href="https://github.com/lilwan345/beacon" target="_blank" rel="noopener">GitHub&nbsp;↗</a>
@@ -249,16 +250,17 @@
             <article class="product reveal">
                 <a class="product-media" href="https://lilwan345.github.io/tinytools/" target="_blank" rel="noopener" aria-label="Open tinytools live site">
                     <img src="assets/img/tinytools-960.jpg" srcset="assets/img/tinytools-960.jpg 960w, assets/img/tinytools.jpg 1280w"
-                         sizes="(min-width: 820px) 482px, 100vw" alt="tinytools homepage — fast, free tools that run entirely in your browser"
+                         sizes="(min-width: 820px) 482px, 100vw" alt="tinytools homepage: fast, free tools that run entirely in your browser"
                          width="1280" height="800" loading="lazy">
                 </a>
                 <div class="product-text">
                     <p class="kicker">Jun 2026 · Vanilla JS · zero servers · zero tracking</p>
                     <h3>tinytools</h3>
                     <p>
-                        Four free tools that run entirely in the browser — nothing ever leaves
-                        your device. PicPress converts and compresses images, ScrubShot strips
-                        photo metadata, PageStack edits PDFs, HueProof builds WCAG-checked palettes.
+                        Four free tools that run entirely in the browser, so nothing ever leaves
+                        your device. PicPress converts and compresses images, ScrubShot strips photo
+                        metadata, PageStack edits PDFs and HueProof builds palettes with WCAG
+                        contrast checks.
                     </p>
                     <p class="feature-links">
                         <a href="https://lilwan345.github.io/tinytools/" target="_blank" rel="noopener">Live site&nbsp;↗</a>
@@ -271,16 +273,16 @@
                 <a class="product-media" id="cyberdeck-media" href="https://lilwan345.github.io/claude-code-cyberpunk/wallpaper/" target="_blank" rel="noopener" aria-label="Open Cyberdeck live wallpaper"
                    data-live="https://lilwan345.github.io/claude-code-cyberpunk/wallpaper/">
                     <img src="assets/img/cyberdeck-960.jpg" srcset="assets/img/cyberdeck-960.jpg 960w, assets/img/cyberdeck.jpg 1280w"
-                         sizes="(min-width: 820px) 482px, 100vw" alt="Cyberdeck — neon cyberpunk skyline with synthwave sun, rendered live in Canvas 2D"
+                         sizes="(min-width: 820px) 482px, 100vw" alt="Cyberdeck: neon cyberpunk skyline with synthwave sun, rendered live in Canvas 2D"
                          width="1280" height="800" loading="lazy">
                 </a>
                 <div class="product-text">
                     <p class="kicker">Jun 2026 · Canvas 2D · 60 fps · no libraries</p>
                     <h3>Cyberdeck</h3>
                     <p>
-                        A cyberpunk live wallpaper plus a full VS Code + Claude Code theme:
-                        neon skyline, synthwave sun, scrolling grid floor — every pixel
-                        hand-rolled in Canvas 2D, with a one-script installer.
+                        A cyberpunk live wallpaper plus a full VS Code and Claude Code theme. Neon
+                        skyline, synthwave sun, a scrolling grid floor, all drawn by hand in Canvas
+                        2D, and one script installs it.
                     </p>
                     <p class="feature-links">
                         <a href="https://lilwan345.github.io/claude-code-cyberpunk/wallpaper/" target="_blank" rel="noopener">Live wallpaper&nbsp;↗</a>
@@ -312,25 +314,25 @@
                 <article class="xp">
                     <p class="xp-date">Oct 2026 – Present</p>
                     <h4>USC Marshall <span>· Research Assistant to Prof. Mohammed Alyakoob</span></h4>
-                    <p>Studying how Airbnb host cancellations changed around a 2018 platform
-                       policy change, in SQL on Snowflake. Before any analysis I checked 6.78M
-                       reviews from 2017–2019: 98.2% of 0-star reviews were automated
-                       &ldquo;host canceled&rdquo; posts and the rest were real reviews missing a
-                       rating, so I count a cancellation only when both hold.</p>
+                    <p>We&rsquo;re looking at how Airbnb host cancellations changed around a 2018
+                       policy change, in SQL on Snowflake. Before doing any analysis I checked 6.78M
+                       reviews from 2017–2019. 98.2% of the 0-star reviews were automated &ldquo;host
+                       canceled&rdquo; posts and the rest were real reviews that just had no rating,
+                       so I only count a cancellation when both signals agree.</p>
                 </article>
                 <article class="xp">
                     <p class="xp-date">Sep 2026 – Present</p>
                     <h4>USC Marshall, Data Sciences &amp; Operations <span>· Tutor, BUAD 312</span></h4>
-                    <p>Selected by the department to tutor Statistics &amp; Data Science for
-                       Business. I run a weekly 2.5-hour help session open to 60+ students
-                       across two sections, answering one-on-one questions on R regression,
-                       hypothesis tests, and bootstrap CIs.</p>
+                    <p>The department picked me to tutor Statistics &amp; Data Science for
+                       Business. I run a weekly 2.5-hour help session open to 60+ students across
+                       two sections, and answer one-on-one questions on regression in R,
+                       hypothesis tests and bootstrap CIs.</p>
                 </article>
                 <article class="xp">
                     <p class="xp-date">Sep – Dec 2025</p>
                     <h4>Marshall Artificial Intelligence Association <span>· Member, Los Angeles</span></h4>
-                    <p>Terminal and Git fundamentals, GitHub workflows, and AI-assisted
-                       development — the toolkit behind everything on this page.</p>
+                    <p>Learned the terminal, Git, GitHub workflows and AI-assisted coding, which
+                       is basically the toolkit behind everything on this page.</p>
                 </article>
                 <article class="xp">
                     <p class="xp-date">Jul – Aug 2023</p>
@@ -367,8 +369,8 @@
             <p class="section-no reveal">04 — Contact</p>
             <h2 class="reveal">Let&rsquo;s talk.</h2>
             <p class="colophon-line reveal">
-                Open to internships and conversations about data, AI, and the future of
-                the analyst workflow.
+                I&rsquo;m looking for internships, and I&rsquo;m always happy to talk about data,
+                AI, or where the analyst job is headed.
             </p>
             <a class="big-email reveal" href="mailto:leowan@usc.edu">leowan@usc.edu</a>
             <p class="colophon-links reveal">
