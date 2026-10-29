@@ -542,6 +542,21 @@ a { color: inherit; }
 
 .xp p { font-size: .92rem; color: var(--muted); }
 
+.xp-shot { margin-top: 1rem; }
+.xp-shot a { display: block; cursor: zoom-in; }
+.xp-shot img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--hairline);
+    background: #fff;
+}
+.xp-shot figcaption {
+    font-family: var(--mono);
+    font-size: .72rem;
+    color: var(--muted);
+    margin-top: .6rem;
+}
+
 .edu { margin-bottom: 2.75rem; }
 .edu p { line-height: 1.75; }
 
