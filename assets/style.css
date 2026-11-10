@@ -354,6 +354,12 @@ a { color: inherit; }
     line-height: 1.6;
 }
 
+/* On a desktop-size window the figure stays in view while the longer text
+   column scrolls past, instead of leaving a blank gap under it. */
+@media (min-width: 821px) and (min-height: 760px) {
+    .feature-media { position: sticky; top: 5.5rem; }
+}
+
 .kicker {
     font-family: var(--mono);
     font-size: .72rem;
